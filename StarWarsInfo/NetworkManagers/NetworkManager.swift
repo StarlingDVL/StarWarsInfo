@@ -7,10 +7,9 @@
 
 import Foundation
 
-class NetworkPlanetManager {
+struct NetworkPlanetManager {
     
-    static let share = NetworkPlanetManager()
-    func fetchPlanet() {
+    mutating func fetchPlanet() {
         guard let url = URL(string: "https://swapi.dev/api/planets") else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -20,15 +19,10 @@ class NetworkPlanetManager {
             }
             
             do {
-                let planet = try JSONDecoder().decode(PlanetList.self, from: data)
-                print(planet)
+               let planets = try JSONDecoder().decode(PlanetList.self, from: data)
             } catch let error {
                 print(error.localizedDescription)
             }
         }.resume()
-        
-        
     }
-    
-    private init() {}
 }

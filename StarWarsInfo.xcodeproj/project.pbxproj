@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		2BE7880B27D6BE5E005865E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7880A27D6BE5E005865E5 /* AppDelegate.swift */; };
 		2BE7880D27D6BE5E005865E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7880C27D6BE5E005865E5 /* SceneDelegate.swift */; };
-		2BE7880F27D6BE5E005865E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7880E27D6BE5E005865E5 /* ViewController.swift */; };
 		2BE7881227D6BE5E005865E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7881027D6BE5E005865E5 /* Main.storyboard */; };
 		2BE7881427D6BE5F005865E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7881327D6BE5F005865E5 /* Assets.xcassets */; };
 		2BE7881727D6BE5F005865E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7881527D6BE5F005865E5 /* LaunchScreen.storyboard */; };
 		2BE7882527D6BF2F005865E5 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7882427D6BF2F005865E5 /* Planet.swift */; };
 		2BE7882727D6C3DB005865E5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7882627D6C3DB005865E5 /* NetworkManager.swift */; };
+		2BE7882927D6CA90005865E5 /* PlanetDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7882827D6CA90005865E5 /* PlanetDescriptionViewController.swift */; };
+		2BE7882B27D6CABD005865E5 /* PlanetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7882A27D6CABD005865E5 /* PlanetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2BE7880727D6BE5E005865E5 /* StarWarsInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE7880A27D6BE5E005865E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BE7880C27D6BE5E005865E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BE7880E27D6BE5E005865E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2BE7881127D6BE5E005865E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BE7881327D6BE5F005865E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BE7881627D6BE5F005865E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BE7881827D6BE5F005865E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BE7882427D6BF2F005865E5 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		2BE7882627D6C3DB005865E5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2BE7882827D6CA90005865E5 /* PlanetDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDescriptionViewController.swift; sourceTree = "<group>"; };
+		2BE7882A27D6CABD005865E5 /* PlanetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 		2BE7882127D6BEBF005865E5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2BE7880E27D6BE5E005865E5 /* ViewController.swift */,
+				2BE7882A27D6CABD005865E5 /* PlanetTableViewController.swift */,
+				2BE7882827D6CA90005865E5 /* PlanetDescriptionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,9 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE7882927D6CA90005865E5 /* PlanetDescriptionViewController.swift in Sources */,
 				2BE7882727D6C3DB005865E5 /* NetworkManager.swift in Sources */,
-				2BE7880F27D6BE5E005865E5 /* ViewController.swift in Sources */,
 				2BE7880B27D6BE5E005865E5 /* AppDelegate.swift in Sources */,
+				2BE7882B27D6CABD005865E5 /* PlanetTableViewController.swift in Sources */,
 				2BE7880D27D6BE5E005865E5 /* SceneDelegate.swift in Sources */,
 				2BE7882527D6BF2F005865E5 /* Planet.swift in Sources */,
 			);
