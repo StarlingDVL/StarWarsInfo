@@ -13,6 +13,8 @@
 		2BE7881227D6BE5E005865E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7881027D6BE5E005865E5 /* Main.storyboard */; };
 		2BE7881427D6BE5F005865E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7881327D6BE5F005865E5 /* Assets.xcassets */; };
 		2BE7881727D6BE5F005865E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE7881527D6BE5F005865E5 /* LaunchScreen.storyboard */; };
+		2BE7882527D6BF2F005865E5 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7882427D6BF2F005865E5 /* Planet.swift */; };
+		2BE7882727D6C3DB005865E5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7882627D6C3DB005865E5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2BE7881327D6BE5F005865E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BE7881627D6BE5F005865E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BE7881827D6BE5F005865E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE7882427D6BF2F005865E5 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		2BE7882627D6C3DB005865E5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		2BE7880927D6BE5E005865E5 /* StarWarsInfo */ = {
 			isa = PBXGroup;
 			children = (
-				2BE7880A27D6BE5E005865E5 /* AppDelegate.swift */,
-				2BE7880C27D6BE5E005865E5 /* SceneDelegate.swift */,
-				2BE7880E27D6BE5E005865E5 /* ViewController.swift */,
-				2BE7881027D6BE5E005865E5 /* Main.storyboard */,
-				2BE7881327D6BE5F005865E5 /* Assets.xcassets */,
-				2BE7881527D6BE5F005865E5 /* LaunchScreen.storyboard */,
-				2BE7881827D6BE5F005865E5 /* Info.plist */,
+				2BE7882127D6BEBF005865E5 /* ViewControllers */,
+				2BE7882327D6BED3005865E5 /* NetworkManagers */,
+				2BE7882227D6BECC005865E5 /* Models */,
+				2BE7881F27D6BE85005865E5 /* Storyboards */,
+				2BE7882027D6BEAF005865E5 /* Resources */,
+				2BE7881E27D6BE6F005865E5 /* Configs */,
 			);
 			path = StarWarsInfo;
+			sourceTree = "<group>";
+		};
+		2BE7881E27D6BE6F005865E5 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7881827D6BE5F005865E5 /* Info.plist */,
+				2BE7880C27D6BE5E005865E5 /* SceneDelegate.swift */,
+				2BE7880A27D6BE5E005865E5 /* AppDelegate.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		2BE7881F27D6BE85005865E5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7881027D6BE5E005865E5 /* Main.storyboard */,
+				2BE7881527D6BE5F005865E5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2BE7882027D6BEAF005865E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7881327D6BE5F005865E5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BE7882127D6BEBF005865E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7880E27D6BE5E005865E5 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2BE7882227D6BECC005865E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7882427D6BF2F005865E5 /* Planet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2BE7882327D6BED3005865E5 /* NetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7882627D6C3DB005865E5 /* NetworkManager.swift */,
+			);
+			path = NetworkManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE7882727D6C3DB005865E5 /* NetworkManager.swift in Sources */,
 				2BE7880F27D6BE5E005865E5 /* ViewController.swift in Sources */,
 				2BE7880B27D6BE5E005865E5 /* AppDelegate.swift in Sources */,
 				2BE7880D27D6BE5E005865E5 /* SceneDelegate.swift in Sources */,
+				2BE7882527D6BF2F005865E5 /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +347,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 475RUK8D4A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarWarsInfo/Info.plist;
+				INFOPLIST_FILE = StarWarsInfo/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +363,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +376,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 475RUK8D4A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarWarsInfo/Info.plist;
+				INFOPLIST_FILE = StarWarsInfo/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
