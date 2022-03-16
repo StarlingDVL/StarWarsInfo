@@ -15,7 +15,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bax-Dm-8PS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="wkH-S3-AlZ">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -24,6 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <connections>
                                     <segue destination="LM2-xz-GXL" kind="show" id="MKb-DN-jOO"/>
                                 </connections>
@@ -51,26 +52,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l94-Cg-lh3">
                                 <rect key="frame" x="57" y="140" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="l94-Cg-lh3" secondAttribute="height" multiplier="1:1" id="Fpd-cu-q7E"/>
+                                    <constraint firstAttribute="width" secondItem="l94-Cg-lh3" secondAttribute="height" multiplier="1:1" id="pHm-qk-eAc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9re-hq-2sZ">
                                 <rect key="frame" x="20" y="490" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BiZ-j1-tb2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BiZ-j1-tb2" firstAttribute="trailing" secondItem="l94-Cg-lh3" secondAttribute="trailing" constant="57" id="1uE-o3-BGF"/>
                             <constraint firstItem="9re-hq-2sZ" firstAttribute="leading" secondItem="BiZ-j1-tb2" secondAttribute="leading" constant="20" id="9OD-27-an6"/>
                             <constraint firstItem="l94-Cg-lh3" firstAttribute="top" secondItem="BiZ-j1-tb2" secondAttribute="top" id="K1U-Go-jre"/>
                             <constraint firstItem="9re-hq-2sZ" firstAttribute="top" secondItem="l94-Cg-lh3" secondAttribute="bottom" constant="50" id="UeE-93-OMp"/>
                             <constraint firstItem="l94-Cg-lh3" firstAttribute="height" secondItem="5L3-yU-Xwg" secondAttribute="height" multiplier="0.334821" id="VkL-sU-2yz"/>
                             <constraint firstItem="BiZ-j1-tb2" firstAttribute="trailing" secondItem="9re-hq-2sZ" secondAttribute="trailing" constant="20" id="fu6-aQ-OF5"/>
-                            <constraint firstItem="l94-Cg-lh3" firstAttribute="leading" secondItem="BiZ-j1-tb2" secondAttribute="leading" constant="57" id="hg5-YS-RPu"/>
+                            <constraint firstItem="l94-Cg-lh3" firstAttribute="centerX" secondItem="5L3-yU-Xwg" secondAttribute="centerX" id="r8Q-pw-Lnj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r8X-rV-FfU"/>
@@ -90,6 +90,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mRH-oO-BmG">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="hPS-Ho-woe" kind="relationship" relationship="rootViewController" id="lGt-0O-QvO"/>
@@ -101,8 +105,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

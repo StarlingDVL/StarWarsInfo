@@ -16,7 +16,12 @@ class PlanetDescriptionViewController: UIViewController {
     @IBOutlet var planetDescriptionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        planetImageView.layer.cornerRadius = 30
+        planetImageView.image = UIImage(named: "\(planet.name ?? "No planet")")
+        
         navigationItem.title = planet.name
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemYellow]
+        
         planetDescriptionLabel.text = planet.description
     }
 }

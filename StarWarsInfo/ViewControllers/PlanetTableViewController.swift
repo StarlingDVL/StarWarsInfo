@@ -16,6 +16,10 @@ class PlanetTableViewController: UITableViewController {
         fetchPlanet(from: "https://swapi.dev/api/planets/?format=json")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let descriptionVC = segue.destination as? PlanetDescriptionViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -29,7 +33,6 @@ class PlanetTableViewController: UITableViewController {
         planetList?.results.count ?? 0
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -39,6 +42,10 @@ class PlanetTableViewController: UITableViewController {
         cell.contentConfiguration = content
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func fetchPlanet(from url: String) {
