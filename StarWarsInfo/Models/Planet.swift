@@ -15,6 +15,17 @@ struct Planet: Decodable {
     let climate: String?
     let population: String?
     
+    var description: String {
+        """
+        Name: \(name ?? "Unknown")
+        Rotation period: \(rotationPeriod ?? "Unknown")
+        Orbital period: \(orbitalPeriod ?? "Unknown")
+        Diametr: \(diameter ?? "Unknown")
+        Climate: \(climate ?? "Unknown")
+        Population: \(population ?? "Unknown")
+        """
+    }
+    
     enum CodingKeys: String, CodingKey {
         case name
         case rotationPeriod = "rotation_period"
@@ -25,6 +36,6 @@ struct Planet: Decodable {
     }
 }
 
-struct PlanetList: Decodable {
+struct PLanetList: Decodable {
     let results: [Planet]
 }

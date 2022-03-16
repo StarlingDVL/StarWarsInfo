@@ -8,22 +8,15 @@
 import UIKit
 
 class PlanetDescriptionViewController: UIViewController {
-
+    
+    var planet: Planet!
+    
+    @IBOutlet var planetImageView: UIImageView!
+    
+    @IBOutlet var planetDescriptionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.title = planet.name
+        planetDescriptionLabel.text = planet.description
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
