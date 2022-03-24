@@ -6,6 +6,13 @@
 //
 
 import Foundation
+import Alamofire
+
+enum NetworkError: Error {
+    case invalidURL
+    case noData
+    case decodingError
+}
 
 class NetworkPlanetManager {
     static let share = NetworkPlanetManager()
@@ -29,7 +36,21 @@ class NetworkPlanetManager {
             } catch let error {
                 print(error.localizedDescription)
             }
-
+            
         }.resume()
+    }
+    
+    func fetchPlanetsWithAlamofire(_ url: String, completion: @escaping(Result<[Planet], NetworkError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let planets = Planet.getPlanets(from: value)
+                    completion(.success(planets))
+                case .failure:
+                    completion(.failure(.decodingError))
+                }
+            }
     }
 }

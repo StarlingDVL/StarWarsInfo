@@ -25,6 +25,26 @@ struct Planet: Decodable {
         Population: \(population ?? "Unknown")
         """
     }
+    init (planetData: [String: Any]) {
+        name = planetData["name"] as? String
+        rotationPeriod = planetData["rotation_period"] as? String
+        orbitalPeriod = planetData["orbital_period"] as? String
+        diameter = planetData["diameter"] as? String
+        climate = planetData["climate"] as? String
+        population = planetData["population"] as? String
+    }
+    
+    static func getPlanets(from value: Any) -> [Planet] {
+        guard let planetList = value as? [String: Any] else { return [] }
+        guard let planetsData = planetList["results"] as? [[String: Any]] else { return [] }
+        var planets: [Planet] = []
+        
+        for planetData in planetsData {
+            let planet = Planet(planetData: planetData)
+            planets.append(planet)
+        }
+        return planets
+    }
     
     enum CodingKeys: String, CodingKey {
         case name
